@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  mongito:
+    image: mongo:6
+    restart: always
+    ports: 
+      - "27017:27017"
+    environment:
+      MONGO_DATABASE: nest-pokemon
+    volumes:
+      - mongodb:/data/db
+
+
+volumes:
+  mongodb:
